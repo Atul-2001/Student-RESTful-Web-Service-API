@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Student RESTful Web Service API</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Student RESTful Web Service API</h2>
+
+        <br><br>
+
+        <h3>Base URI</h3>
+        <ul>
+            <li>/api</li>
+        </ul>
+        <br><br>
+
+        <h3>Fake Data URI</h3>
+        <ul>
+            <li><pre><strong>GET</strong>  - /api/fake/data   ->  <i>Adds dummy data</i></pre></li>
+        </ul>
+
+        <br><br>
+
+        <dl>
+            <dt>
+                <h3>Student</h3>
+            </dt>
+            <dd class="ps-5">
+                <dl>
+                    <dt>
+                        <h4>Endpoints</h4>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li><pre><strong>POST  </strong>  -  /api/student       ->   <i>Add a new Student</i></pre></li>
+                            <li><pre><strong>PUT   </strong>  -  /api/student/{id}  ->   <i>Update given student</i></pre></li>
+                            <li><pre><strong>GET   </strong>  -  /api/students      ->   <i>Get all students</i></pre></li>
+                            <li><pre><strong>GET   </strong>  -  /api/student/{id}  ->   <i>Get specific student</i></pre></li>
+                            <li><pre><strong>DELETE</strong>  -  /api/students      ->   <i>Delete all students</i></pre></li>
+                            <li><pre><strong>DELETE</strong>  -  /api/student/{id}  ->   <i>Delete given student</i></pre></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <br>
+                <dl>
+                    <dt>
+                        <h4>Input Format</h4>
+                    </dt>
+                    <dd>
+                        <pre class="text-success ps-0">
+                            {
+                                "id"     : "[student-id (numerical value only)]", // Optional in POST, but compulsory in PUT
+                                "name"   : "[student-name]",
+                                "dob"    : "[student-date-of-birth]",
+                                "email"  : "[student-email]",
+                                "mobile" : "[student-mobile-no]",
+                                "course" : {
+                                                "id"       : "[course-id][eg:- C101]",
+                                                "name"     : "[course-name]",
+                                                "duration" : "[course-duration][eg:- 3 years]",
+                                                "fees"     : "[course-fees][eg:- 1000/- per year]"
+                                            }
+                            }
+                        </pre>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+
+        <br><br>
+
+        <dl>
+            <dt>
+                <h3>Course</h3>
+            </dt>
+            <dd class="ps-5">
+                <dl>
+                    <dt>
+                        <h4>Endpoints</h4>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li><pre><strong>POST  </strong>  -  /api/course       ->   <i>Add a new course</i></pre></li>
+                            <li><pre><strong>PUT   </strong>  -  /api/course/{id}  ->   <i>Update given course</i></pre></li>
+                            <li><pre><strong>GET   </strong>  -  /api/courses      ->   <i>Get all courses</i></pre></li>
+                            <li><pre><strong>GET   </strong>  -  /api/course/{id}  ->   <i>Get specific course</i></pre></li>
+                            <li><pre><strong>DELETE</strong>  -  /api/courses      ->   <i>Delete all courses</i></pre></li>
+                            <li><pre><strong>DELETE</strong>  -  /api/course/{id}  ->   <i>Delete given course</i></pre></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <br>
+                <dl>
+                    <dt>
+                        <h4>Input Format</h4>
+                    </dt>
+                    <dd>
+                        <pre class="text-success ps-0">
+                            {
+                                "id"       : "[course-id][e.g:- C101]", // Optional in POST, but compulsory in PUT
+                                "name"     : "[course-name]",
+                                "duration" : "[course-duration][eg:- 3 years]",
+                                "fees"     : "[course-fees][eg:- 1000/- per year]"
+                            }
+                        </pre>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>
