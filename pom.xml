@@ -45,7 +45,19 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.4</version>
+                <configuration>
+                    <jdkVersion>11</jdkVersion>
+                    <appName>student-web-service</appName>
+
+                    <processTypes>
+                        <web>java $JAVA_OPTS -jar target/*.jar --server.port=$PORT $JAR_OPTS</web>
+                    </processTypes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>
