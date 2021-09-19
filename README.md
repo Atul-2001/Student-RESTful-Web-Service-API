@@ -121,7 +121,7 @@ The REST API to the student web service is described below.
     
 ### Request Body
     {
-      "id"       : "[course-id][eg:- C101]",
+      "id"       : "[course-id][eg:- C101]", // Optional in POST, but compulsory in PUT
       "name"     : "[course-name]",
       "duration" : "[course-duration][eg:- 3 years]",
       "fees"     : "[course-fees][eg:- 1000/- per year]"
